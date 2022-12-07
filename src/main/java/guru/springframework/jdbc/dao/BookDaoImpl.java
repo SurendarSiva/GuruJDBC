@@ -162,7 +162,7 @@ public class BookDaoImpl implements BookDao {
 
         try {
             connection = source.getConnection();
-            preparedStatement = connection.prepareStatement("delete from author where id = ?");
+            preparedStatement = connection.prepareStatement("delete from book where id = ?");
             preparedStatement.setLong(1,id);
             preparedStatement.execute();
         } catch (SQLException e) {
